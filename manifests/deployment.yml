@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manaliassignment 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manaliassignment
+  template:
+    metadata:
+      labels:
+        app: manaliassignment 
+    spec:
+      containers:
+        - name: manaliassignment 
+          image: manaliassignmentcr.azurecr.io/manaliassignment
+          ports:
+          - containerPort: 80
